@@ -1,6 +1,6 @@
 import type { Album,AlbumSearchResponse } from "./types";
 
-export async function buscarAlbuns(termo: string): Promise results: Album[] {
+export async function buscarAlbuns(termo: string): Promise<Album[]> {
     const resposta = await fetch(
         `https://itunes.apple.com/search?term=${encodeURIComponent(termo)}&entity=album&limit=10`
     );
