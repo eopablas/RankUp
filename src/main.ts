@@ -1,22 +1,28 @@
-import {buscarAlbuns} from "./api";
+import { buscarAlbuns } from "./api";
 
-const pesquisarAlbum = document.querySelector<HTMLInputElement>("#campoAlbum");
+// ===== Elementos da página =====
+const campoAlbum = document.querySelector<HTMLInputElement>("#campoAlbum");
 
-if (!pesquisarAlbum) {
-    throw new Error("Elemento #campoAlbum não encontrado no index.html.");
+if (!campoAlbum) {
+    throw new Error("Elemento #campoAlbum não encontrado no index.html");
 }
 
-const btnPesquisarAlbum = document.querySelector<HTMLButtonElement>("#btnPesquisar");
+const btnPesquisar = document.querySelector<HTMLButtonElement>("#btnPesquisar");
 
-if (!btnPesquisarAlbum) {
-    throw new Error("Elemento #btnPesquisar não encontrado no index.html.");
+if (!btnPesquisar) {
+    throw new Error("Elemento #btnPesquisar não encontrado no index.html");
 }
 
-const albumPesquisado = document.querySelector<HTMLDivElement>("#albumDestaque");
+const albumDestaque = document.querySelector<HTMLDivElement>("#albumDestaque");
 
-if (!albumPesquisado) {
-    throw new Error("Elemento #albumDestaque não encontrado no index.html.");
-        
+if (!albumDestaque) {
+    throw new Error("Elemento #albumDestaque não encontrado no index.html");
 }
 
-console.log(pesquisarAlbum, btnPesquisarAlbum, albumPesquisado);
+// ===== Funções =====
+
+// ===== Eventos =====
+btnPesquisar.addEventListener("click", async () => {
+    const albuns = await buscarAlbuns(campoAlbum.value);
+    console.log(albuns);
+});
