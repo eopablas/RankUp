@@ -10,9 +10,8 @@
     <header>
          <nav>
             <div>
-                <a>
-                  <h1>Logo</h1>  <!--Logo do RankUp-->
-
+                <a>Logo</a> <!--Logo do RankUp-->
+                
                 <!--Menu-->
                 <div>
                     <ul>
@@ -25,7 +24,7 @@
                         </li>
 
                         <li>
-                            <a href="musica">Música</a>
+                            <a href="#musica">Música</a>
                         </li>
                     </ul>
 
@@ -57,18 +56,18 @@
 
         <div> <!--Bloco de Comentários-->
             <div>
-                <label for="pesquisarAlbum">Digite o nome do álbum</label>
-                <input type="text" id="pesquisarAlbum">
-                <button>Pesquisar</button> <!--Posteriomente será substituido por um icone de lupa com framework de CSS-->
+                <label for="campoAlbum">Digite o nome do álbum</label>
+                <input type="text" id="campoAlbum">
+                <button id="btnPesquisar">Pesquisar</button> <!--Posteriomente será substituido por um icone de lupa com framework de CSS-->
             </div>
             <div>
-                <textarea name="" id="">Deixe sua opinião</textarea>
-                <button>Enviar</button>
+                <textarea id="opiniao" placeholder="Deixe sua opinião"></textarea>
+                <button id="btnEnviar">Enviar</button>
             </div>
         </div>
 
         <div> <!--Bloco onde aparece o album pesquisado-->
-            <div>
+            <div id="albumDestaque">
                 <img src="" alt="">
             </div>
         </div>
@@ -89,5 +88,7 @@
         <p>&copy; 2026 RANKUP</p>
         <p>Avalie. Descubra. Compartilhe.</p>
     </footer>
+
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
