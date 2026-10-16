@@ -24,5 +24,11 @@ if (!albumDestaque) {
 // ===== Eventos =====
 btnPesquisar.addEventListener("click", async () => {
     const albuns = await buscarAlbuns(campoAlbum.value);
-    console.log(albuns);
+
+    if (albuns.length === 0) {
+        albumDestaque.textContent = "Nenhum álbum encontrado.";
+        return;
+    }
+
+    albumDestaque.textContent = albuns[0].collectionName;
 });
