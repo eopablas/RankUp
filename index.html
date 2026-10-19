@@ -1,97 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RankUp</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Navbar-->
     <header>
-         <nav>
-            <div>
-                <a>Logo</a> <!--Logo do RankUp-->
-                
-                <!--Menu-->
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#inicio">Início</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#album">Album</a>
-                        </li>
+      <nav>
+        <div>
+          <a>Logo</a>
+          <!--Logo do RankUp-->
 
-                        <li>
-                            <a href="#musica">Música</a>
-                        </li>
-                    </ul>
+          <!--Menu-->
+          <div>
+            <ul>
+              <li>
+                <a href="#inicio">Início</a>
+              </li>
 
-                    <button type="button">Login</button> <!--Botão de Login-->
-                </div>
-            </div>
-         </nav>
+              <li>
+                <a href="#album">Album</a>
+              </li>
+
+              <li>
+                <a href="#musica">Música</a>
+              </li>
+            </ul>
+
+            <button type="button">Login</button>
+            <!--Botão de Login-->
+          </div>
+        </div>
+      </nav>
     </header>
-    
+
     <main>
-        <!--Title-->
-        <div>
-            <h1>BEM VINDO AO RANKUP</h1>
-            <p>Ranqueie os álbuns e deixe o feedback para toda a comunidade!</p>
-        </div>
+      <!--Title-->
+      <div>
+        <h1>BEM VINDO AO RANKUP</h1>
+        <p>Ranqueie os álbuns e deixe o feedback para toda a comunidade!</p>
+      </div>
 
-        <!--Carrossel de Imagem-->
-        <div>
-
-        </div>
+      <!--Carrossel de Imagem-->
+      <div></div>
     </main>
 
     <!--Seção de comentários-->
     <section>
+      <div>
+        <h2>DEIXE SUA OPINIÃO SOBRE OS ÁLBUNS</h2>
+        <p>A comunidade e os artistas precisam saber sua opinião.</p>
+      </div>
+
+      <div>
+        <!--Bloco de Comentários-->
         <div>
-            <h2>DEIXE SUA OPINIÃO SOBRE OS ÁLBUNS</h2>
-            <p>A comunidade e os artistas precisam saber sua opinião.</p>
+          <label for="campoAlbum">Digite o nome do álbum</label>
+          <input type="text" id="campoAlbum" />
+          <button id="btnPesquisar">Pesquisar</button>
         </div>
 
-        <div> <!--Bloco de Comentários-->
-    <div>
-        <label for="campoAlbum">Digite o nome do álbum</label>
-        <input type="text" id="campoAlbum">
-        <button id="btnPesquisar">Pesquisar</button>
-    </div>
+        <ul id="listaAlbuns"></ul>
 
-    <ul id="listaAlbuns"></ul>
-
-    <div>
-        <textarea id="opiniao" placeholder="Deixe sua opinião"></textarea>
-        <button id="btnEnviar">Enviar</button>
-    </div>
-</div>
-
-        <div> <!--Bloco onde aparece o album pesquisado-->
-            <div id="albumDestaque">
-                <img src="" alt="">
-            </div>
+        <div>
+          <textarea id="opiniao" placeholder="Deixe sua opinião"></textarea>
+          <button id="btnEnviar">Enviar</button>
         </div>
+      </div>
+
+      <div>
+        <!--Bloco onde aparece o album pesquisado-->
+        <div id="albumDestaque">
+          <img src="" alt="" />
+        </div>
+      </div>
     </section>
 
     <!--Seção onde aparece os melhores álbuns avaliados pelos usuários-->
     <section>
-        <div>
-            <h2>CONHEÇA OS MELHORES ÁLBUNS DA ATUALIDADE</h2>
-            <p>Avaliado por vocês</p>
-        </div>
+      <div>
+        <h2>CONHEÇA OS MELHORES ÁLBUNS DA ATUALIDADE</h2>
+        <p>Avaliado por vocês</p>
+      </div>
 
-        <div> <!--Bloco onde vai aparecer a listagem dos albuns de acordo com o melhor até o pior-->
-        </div>
+      <div>
+        <!--Bloco onde vai aparecer a listagem dos albuns de acordo com o melhor até o pior-->
+      </div>
     </section>
-    
+
     <footer class="rodape">
-        <p>&copy; 2026 RANKUP</p>
-        <p>Avalie. Descubra. Compartilhe.</p>
+      <p>&copy; 2026 RANKUP</p>
+      <p>Avalie. Descubra. Compartilhe.</p>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
-</body>
+  </body>
 </html>
